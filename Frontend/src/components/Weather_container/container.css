@@ -1,0 +1,34 @@
+.container{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+border: 2px solid black;
+border-radius: 10px;
+width: 350px;
+height: 150px;
+}
+
+.image_div{
+height: 100px;
+width: 100px;
+margin: 10px;
+margin-right: 20px;
+margin-left : 20px;
+}
+
+.image_div img{
+height: 100%;
+width: 100%;
+}
+
+.weather_details{
+width: 60%;
+margin: 10px;
+}
+
+.detail-div{
+    font-style: italic;
+  margin-top: 2px;
+
+}
