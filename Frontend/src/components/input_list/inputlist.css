@@ -1,0 +1,100 @@
+
+  
+  .titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:60vw;
+    height: 50px;
+    background-color: rgb(88, 113, 105);
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+    font-size: larger;
+    font-weight: bold;
+  }
+  
+  .citytag {
+    width: 70%;
+    margin-left: 20px;
+  }
+  
+  .update-delete-tag {
+    display: flex;
+    flex-direction: row;
+    min-width: 30%;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .delete-tag,
+  .update-tag {
+    text-align: center;
+    margin: 10px; 
+    width: 50%;
+  }
+  .Add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Add-button input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 400px; 
+}
+
+.Add-button input[type="button"] {
+    padding: 10px 20px;
+    background-color: #090a0a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Add-button input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .Add-button input[type="text"] {
+        width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .titlebar{
+      width: 90vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      height: 50px;
+      background-color: rgb(88, 113, 105);
+      margin-bottom: 5px;
+      border-bottom: 1px solid black;
+      font-size: larger;
+      font-weight: bold;
+
+    }
+    .citytag {
+      width: 50%;
+      margin-left: 20px;
+    }
+    
+    .update-delete-tag {
+      display: flex;
+      flex-direction: row;
+      min-width: 50%;
+      width: auto;
+      align-items: center;
+      justify-content: center;
+    }
+}

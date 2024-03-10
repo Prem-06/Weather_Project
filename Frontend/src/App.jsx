@@ -1,16 +1,23 @@
 import './App.css'
-import Signup from './components/signup/signup.jsx'
-import Login from './components/login/login.jsx'
-import Home from './components/home/home.jsx'
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import First from './components/Id-generatirpage/first'
+import Inputlist from './components/input_list/inputlist'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   
 
   return (
     
-     <div>
-        <Home/>
-     </div>
-    
+     <BrowserRouter>
+      <Routes>
+        <Route path='/' exact element={<First/>}></Route>
+       <Route path="/list" element={<Inputlist/>}></Route>
+       <Route path="/weather_detail" element={<First/>}></Route>
+      </Routes>
+      <ToastContainer theme="dark"/>
+     </BrowserRouter>
+     
   )
 }
 

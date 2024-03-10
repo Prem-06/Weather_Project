@@ -1,0 +1,67 @@
+
+  
+  .listbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width:60vw;
+    height: 50px;
+    margin-bottom: 5px;
+    
+    font-size: larger;
+  }
+  .listbar:hover{
+   cursor: pointer;
+  }
+  
+  .cityname {
+    width: 70%;
+    margin-left: 20px;
+  }
+  
+  .update-delete-div {
+    display: flex;
+    flex-direction: row;
+    min-width: 30%;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .delete,
+  .update {
+    text-align: center;
+    margin: 10px; 
+    width: 50%;
+  }
+  .delete-icon{
+    transition: all ease-in;
+  }
+  .delete-icon:hover{
+     cursor: pointer;
+     transform: scale(1.15);
+  }
+  .update-icon{
+    transition: all ease-in;
+  }
+  .update-icon:hover{
+     cursor: pointer;
+     transform: scale(1.15);
+  }
+  
+
+  @media (max-width: 700px) {
+    .listbar {
+        width: 90vw;
+    }
+
+    .cityname {
+        width: 60%; 
+    }
+
+    .update-delete-div {
+        min-width: 40%; 
+    }
+}

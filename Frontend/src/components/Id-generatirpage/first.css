@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.weather_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two containers per row */
+    gap: 20px; /* Adjust gap between containers */
+    justify-content: center; /* Center the grid horizontally */
+}
+
+.Container {
+    width: 100%; /* Adjust width of the container */
+}
+.page_shift {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.page_shift input[type="button"] {
+    padding: 10px 20px;
+    background-color: #0c0c0c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: large;
+    font-weight: bold;
+}
+
+.page_shift input[type="button"]:hover {
+    background-color: #0056b3;
+    
+}
+
+
+
+
+@media (max-width: 768px) {
+    .weather_container {
+        grid-template-columns: 1fr; 
+    }
+    .page_shift {
+        margin-top: 20px;
+    }
+}
