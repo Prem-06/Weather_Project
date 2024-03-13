@@ -54,6 +54,7 @@ router.get("/weather", async (req, res) => {
   }
   try {
     const details = await LIST.findOne({ uuid: uuid });
+    
     if (details) {
       const weather_data = [];
       for (const city of details.citylist) {
@@ -69,7 +70,7 @@ router.get("/weather", async (req, res) => {
           }
         );
       }
-      return res.json(Array(weather_data));
+      return res.json(weather_data);
     } else {
       return res.json({ error: "Not matched" });
     }

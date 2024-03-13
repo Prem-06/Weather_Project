@@ -17,7 +17,7 @@ async function getlocation(latitude,longitude){
         const city = data.address.city;
       return city;
     } catch (error) {
-        console.error("Error fetching city:", error);
+        console.error("Error fetching city:");
         return null
     }
 }
@@ -36,9 +36,6 @@ router.post('/generate_uuid',async (req,res)=>{
 
     const latitude=req.body.location.latitude;
     const longitude=req.body.location.longitude;
-   
-    console.log("latitude:"+latitude)
-    console.log("longitude"+longitude)
     const city=await getlocation(latitude,longitude)
     const id=String(await generate_uuid());
     const token=await generate_token(id);

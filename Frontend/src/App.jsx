@@ -11,7 +11,7 @@ function App() {
     
      <BrowserRouter>
       <Routes>
-        <Route path='/' exact element={<First/>}></Route>
+        <Route path='/'  element={<First/>}></Route>
        <Route path="/list" element={<Inputlist/>}></Route>
        <Route path="/weather_detail" element={<First/>}></Route>
       </Routes>

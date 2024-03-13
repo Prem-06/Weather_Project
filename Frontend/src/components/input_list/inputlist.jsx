@@ -23,8 +23,7 @@ const Inputlist = () => {
               }
           });
           const detail = await response.json();
-          
-          setdetail(detail[0])
+          setdetail(detail)
           setisloading(false)
       } catch (error) {
           console.error("Error fetching weather details:", error);
