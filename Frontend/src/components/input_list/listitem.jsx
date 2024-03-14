@@ -12,7 +12,13 @@ const ListItem = (props) => {
    const [modalOpen, setModalOpen] = useState(false);
   const [weatherDetail, setWeatherDetail] = useState(null);
   const {count,setcount}=props
+  
   async function deleteItem(del_city) {
+    const current_city=localStorage.getItem('current_city');
+    if(current_city===del_city){
+        notifyB('This is your current location and cannot be deleted')
+        return
+    }
    await fetch('http://127.0.0.1:3000/delete_city',{
     method:"delete",
     headers:{
@@ -43,8 +49,14 @@ const ListItem = (props) => {
 }
 
 async function update_city(current_city) {
+    const city=localStorage.getItem('current_city');
+    if(city===current_city){
+        notifyB('This is your current location and cannot be updated')
+        return
+    }
     const val= window.prompt('Enter new city name')
       if(val){
+       
         try {
             const token = localStorage.getItem('weather_app_token');
             if (!token) {

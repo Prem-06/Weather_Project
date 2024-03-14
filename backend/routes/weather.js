@@ -6,6 +6,7 @@ const {secret_key} = require('../keys');
 const LIST = mongoose.model("LIST");
 const { weather_baseurl, weather_key } = require("../keys");
 const fetch = require("node-fetch");
+
 async function getweather_data_from_cityname(city) {
   try {
     const response = await fetch(

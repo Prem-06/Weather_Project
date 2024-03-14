@@ -4,7 +4,7 @@ const LIST = mongoose.model("LIST");
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const {secret_key} = require('../keys');
-
+const save_data =require('./caching.js')
 const { weather_baseurl, weather_key } = require("../keys");
 const fetch = require("node-fetch");
 async function getweather_data_from_cityname(city) {
@@ -45,9 +45,9 @@ function get_uuid_from_token(token) {
 }
 
 
-router.post("/addcity", (req, res) => {
+router.post("/addcity", async(req, res) => {
   const { token, city } = req.body;
- 
+  await save_data(city);
 const uuid=get_uuid_from_token(token)
   if (uuid === "" || city === "") {
     return res.json({ error: "empty field" });
@@ -58,12 +58,13 @@ const uuid=get_uuid_from_token(token)
       if (detail) {
         if (!detail.citylist.includes(city)) {
           const getted_city= await getweather_data_from_cityname(city);
-          console.log(getted_city)
+          
           if(getted_city.city!==city){
         return res.json(({error:"No data found"}))
           }
           detail.citylist.push(city);
           detail.save();
+         
           res.json({ message: "City Added" });
         } else {
           res.json({ message: "city already exist" });

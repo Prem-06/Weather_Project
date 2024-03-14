@@ -20,6 +20,14 @@
     width: 70%;
     margin-left: 20px;
   }
+  .cityname p{
+    font-weight: bold;
+  }
+  .cityname p:hover{
+   text-decoration: underline;
+   /* box-shadow: 0px 0px 1px 0px black; */
+   
+  }
   
   .update-delete-div {
     display: flex;

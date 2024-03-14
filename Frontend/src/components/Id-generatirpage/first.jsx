@@ -27,7 +27,7 @@ const First = () => {
       });
 
       const res = await response.json();
-      return res.token || null;
+      return res || null;
     } catch (error) {
       console.error("Error getting token:", error);
       return null;
@@ -60,7 +60,9 @@ const First = () => {
             const { latitude, longitude } = position.coords;
             const val = await gettoken(latitude, longitude);
             setToken(val);
-            localStorage.setItem("weather_app_token", val);
+            console.log(val)
+            localStorage.setItem("weather_app_token", val.token);
+            localStorage.setItem("current_city", val.city);
             setTokenRetrieved(true);
           })
         } else {

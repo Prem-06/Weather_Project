@@ -66,8 +66,7 @@
 @media (max-width: 768px) {
     .Add-button input[type="text"] {
         width: 100%; 
-        margin-right: 0; 
-        margin-bottom: 10px; 
+        margin-right: 10px; 
     }
 
     .titlebar{
@@ -97,4 +96,11 @@
       align-items: center;
       justify-content: center;
     }
+    .Add-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+  }
+    
 }

@@ -7,5 +7,7 @@ const list=new mongoose.Schema({
     citylist:[{
         type:String
     }]
+    
+    
 })
 mongoose.model('LIST',list);

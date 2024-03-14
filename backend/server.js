@@ -6,6 +6,7 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 require("./models/list_item");
+require("./models/caching_details.js");
 app.use(require("./routes/addcity"));
 app.use(require("./routes/delete_city.js"));
 app.use(require("./routes/update_city.js"));
@@ -24,3 +25,4 @@ mongoose
 app.listen(port, () => {
   console.log("server is running on port 3000");
 });
+
